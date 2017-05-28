@@ -7,3 +7,13 @@ services:
     #service_name:
     #    class: AppBundle\Directory\ClassName
     #    arguments: ['@another_service_name', 'plain_value', '%parameter_name%']
+    app.form_registration:
+        class: Star\workBundle\Form\RegistrationFormType
+        tags:
+            - { name: form.type }
+
+    app.redirect_after_register_subscriber:
+        class: Star\workBundle\EventListener\RedirectAfterRegistrationSubscriber
+        autowire: true
+        tags:
+            - { name: kernel.event_subscriber }

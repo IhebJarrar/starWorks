@@ -1,0 +1,14 @@
+registration:
+    flash:
+        user_created: "Welcome %username% let's do some work."
+    email:
+        subject: 'Welcome %username%!'
+        message: |
+            Hello %username%!
+
+            To finish activating your account - please visit %confirmationUrl%
+
+            This link can only be used once to validate your account.
+
+            Regards,
+            the Team.
