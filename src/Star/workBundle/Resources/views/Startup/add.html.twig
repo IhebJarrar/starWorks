@@ -8,8 +8,18 @@
          <h1 class="center" >Create your Startup </h1>
 
 
-          {{ form(f) }}
+              {{ form_row(f.name) }}
 
+
+                 <label>Invite your team by Emails</label>
+                   <div class="chips chips-placeholder">
+
+                   </div>
+
+
+          {{ form_row(f.categories) }}
+
+            {{ form_row(f.Create) }}
 
        </div>
 

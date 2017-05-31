@@ -31,16 +31,16 @@ class DefaultController extends Controller
 
         $form=$this->createForm(StartupType::class,$startup);
 
-
-        if ($form->isSubmitted() && $form->isValid()  )
+        if ( $form->isSubmitted() && $form->isValid()  )
         {
+
             $form->handleRequest($request);
 
             $em=$this->getDoctrine()->getManager();
             $em->persist($startup);
             $em->flush();
 
-               /// return $this->redirectToRoute(''); redirection after the creation of the startup
+               //return $this->redirectToRoute(''); redirection after the creation of the startup
 
         }
         return $this->render('StarworkBundle:Startup:add.html.twig',array('f'=>$form->createView()));
